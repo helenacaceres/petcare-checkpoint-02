@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>PetCare API</title>
+</head>
+<body>
+    <h1>PetCare API</h1>
+    <p>Sistema de cadastro de pets para clínica veterinária.</p>
+
+    <h2>Cadastrar Pet</h2>
+
+    <form id="formPet">
+        <label>Nome do pet:</label><br>
+        <input type="text" id="nome" required><br><br>
+
+        <label>Espécie:</label><br>
+        <input type="text" id="especie" required placeholder="Ex: cachorro, gato"><br><br>
+
+        <label>Idade:</label><br>
+        <input type="number" id="idade" required><br><br>
+
+        <label>Peso:</label><br>
+        <input type="number" step="0.1" id="peso" required><br><br>
+
+        <label>Nome do tutor:</label><br>
+        <input type="text" id="tutor" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <hr>
+
+    <h2>Listagem de Pets</h2>
+    <button onclick="listarPets()">Atualizar lista</button>
+    <ul id="listaPets"></ul>
+
+    <hr>
+
+    <h2>Buscar Pet por ID</h2>
+    <input type="number" id="buscaId" placeholder="Digite o ID">
+    <button onclick="buscarPorId()">Buscar</button>
+    <p id="resultadoBusca"></p>
+
+    <hr>
+
+    <h2>Filtrar por Espécie</h2>
+    <input type="text" id="filtroEspecie" placeholder="Ex: cachorro">
+    <button onclick="filtrarPorEspecie()">Filtrar</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
